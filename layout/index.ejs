@@ -1,0 +1,22 @@
+<div class="divider-vert" data-content=""></div>
+<div class="timeline">
+<% for (var i in theme.main) { %>
+    <div class="timeline-item" id="timeline-example-<%= i %>">
+        <div class="timeline-left icon-lg">
+            <a href="#timeline-example-1" class="timeline-icon tooltip" data-tooltip="<%= theme.main[i].subtitle || '#' %>"></a>
+        </div>
+        <div class="timeline-content">
+            <div class="tile">
+                <div class="tile-content">
+                    <p class="tile-subtitle"><%= theme.main[i].subtitle %></p>
+                    <p class="tile-title"><%= theme.main[i].title %></p>
+                    <p class="tile-title"><%= theme.main[i].content %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<% } %>
+</div>
+
+
+

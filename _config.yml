@@ -1,0 +1,13 @@
+menu:
+  Home: /
+
+title: Is Conte
+description: 放慢脚步，没有那么多要抓住
+author: Conte
+favicon: http://7mnlkb.com1.z0.glb.clouddn.com/CT-V1.jpg
+
+main:
+  a: 
+    subtitle: 2017.07.12
+    title: v0.5
+    content: 完成基本功能  

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <%- partial('_partial/head') %>
+  <body>
+  <div class="container">
+    <div class="columns col-gapless">
+    	<div id="sidebar" class="docs-sidebar column col-2 col-sm-12">
+			<ul class="nav">
+				<li class="nav-item">
+					<div class="c-title">
+						<h4><a href="/"><%= theme.title %></a></h4>
+					</div>
+				</li>
+				<li class="divider" data-content=""></li>
+				<li class="nav-item">
+					<blockquote>
+						<p><%= theme.description %></p>
+					  	<cite>- <%= theme.author %></cite>					
+					</blockquote>
+				</li>
+				<li class="divider" data-content="List"></li>
+			  	<% site.posts.each(function (post) { %>
+				<li class="nav-item">
+			        <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+			    </li>
+			  	<% }) %>
+			</ul>
+		</div>
+		<a href="#sidebar-close" id="sidebar-close" class="docs-nav-clear"></a>
+		<div class="column col-10 col-sm-12">
+			<a href="#sidebar" class="btn btn-lg btn-link btn-action show-sm">
+				<i class="icon icon-menu"></i>
+			</a>
+			<div class="main-content">
+				<%- body %>
+		</div>
+    </div>
+  </div>
+  </body>
+</html>
